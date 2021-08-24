@@ -6,30 +6,31 @@ public class Caneta {
     boolean tampada;
 
     void status(){
-       System.out.println("Modelo: ");
-       System.out.println("Caneta de cor: ");
-       System.out.println("");
-       System.out.println();
-       System.out.println();
-       //*O "this" da preferencia/a quem está chamando o  método/*
+       System.out.println("Modelo: " + this.modelo);
+       System.out.println("Caneta de cor: " + this.cor);
+       System.out.println("Ponta:" + this.ponta);
+       System.out.println("Carga:" + this.carga);
+       System.out.println("Está tampada? " + this.tampada);
+       //*O "this" da referência/a quem está chamando o  método/*
       
 
     }
      
     void rabiscar(){
-      if(tampada){
-         System.out.print("ERRO");
+      if(tampada == true){
+         System.out.print("ERRO! Não pode rabiscar");
             
         } else {
-         System.out.print("Rabisco");
+         System.out.print("Rabiscando...");
         }
       }
      void tampar () {
+       this.tampada = true;
         
     }
     
       void destampar () {
-
+       this.tampada = false;
 
     }
    
